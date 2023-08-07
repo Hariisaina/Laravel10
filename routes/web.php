@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\AuthProfesseur;
+use App\Http\Controllers\CoucouController;
 
 
 /*
@@ -26,6 +27,7 @@ Route::post('/login-user',[AuthController::class,'loginUser']) -> name('login-us
 Route::post('/dashboard', [AuthController::class,'dashboard'])->name('dashboard');
 Route::get('/login_professeur',[AuthProfesseur::class, 'login_professeur']);
 Route::post('/loginEns',[AuthProfesseur::class,'loginEns']) -> name('loginEns');
+Route::post('/cc',[CoucouController::class,'cc']);
 
 
 
